@@ -1,0 +1,147 @@
+{
+  "Anggota": [
+    {
+      "nama": "Farhan Fadhila",
+      "jabatan": "Koordinator Lapangan",
+      "nim": "12250113444",
+      "url_foto": "https://res.cloudinary.com/dxr2nnuji/image/upload/v1752425011/Farhan_Fadhila_tnplha.jpg",
+      "jurusan": "Teknik Informatika",
+      "fakultas": "Sains dan Teknologi",
+      "zodiak": "Gemini",
+      "instagram": "budisantoso",
+      "no_wa": "0895603148022"
+    },
+    {
+      "nama": "Alvia Zackia Syabrina",
+      "jabatan": "Sekretaris Umum",
+      "url_foto": "https://res.cloudinary.com/dxr2nnuji/image/upload/v1752425865/Alvia_Zackia_Syabrina_k5ytet.jpg",
+      "nim": "12210122856",
+      "jurusan": "PENDIDIKAN AGAMA ISLAM S1",
+      "fakultas": "TARBIYAH DAN KEGURUAN",
+      "zodiak": "Gemini",
+      "instagram": "alviasyabrina_10",
+      "no_wa": "+6285366884042"
+    },
+    {
+      "nama": "AGUS RIDA",
+      "jabatan": "Sekretaris Umum",
+      "url_foto": "https://res.cloudinary.com/dxr2nnuji/image/upload/v1752426307/AgusRida_vhsn6v.jpg",
+      "nim": "12210224598",
+      "jurusan": "PENDIDIKAN BAHASA ARAB S1",
+      "fakultas": "TARBIYAH DAN KEGURUAN",
+      "zodiak": "Gemini",
+      "instagram": "agusridaa",
+      "no_wa": "+6289602612333"
+    },
+    {
+      "nama": "DEBI NAAGISTA",
+      "jabatan": "",
+      "url_foto": "https://res.cloudinary.com/dxr2nnuji/image/upload/v1752426627/debinagista_sn44u2.jpg",
+      "nim": "12210621874",
+      "jurusan": "PENDIDIKAN EKONOMI S1",
+      "fakultas": "TARBIYAH DAN KEGURUAN",
+      "zodiak": "Cancer",
+      "instagram": "Debboy.z_",
+      "no_wa": "+6281285782460"
+    },
+    {
+      "nama": "TRIE HELZA WAHYUNI",
+      "jabatan": "",
+      "url_foto": "",
+      "nim": "12270324836",
+      "jurusan": "AKUNTANSI S1",
+      "fakultas": "EKONOMI DAN ILMU SOSIAL",
+      "zodiak": "",
+      "instagram": "",
+      "no_wa": ""
+    },
+    {
+      "nama": "Rika Rahmi",
+      "jabatan": "",
+      "url_foto": "",
+      "nim": "12210421482",
+      "jurusan": "PENDIDIKAN BAHASA INGGRIS S1",
+      "fakultas": "TARBIYAH DAN KEGURUAN",
+      "zodiak": "",
+      "instagram": "",
+      "no_wa": ""
+    },
+    {
+      "nama": "MUHAMMAD AZNIL",
+      "jabatan": "",
+      "url_foto": "",
+      "nim": "12230210491",
+      "jurusan": "Ilmu Al Qur'an dan Tafsir S1",
+      "fakultas": "USHULUDDIN",
+      "zodiak": "Scorpio katanya jahat. Eh bener",
+      "instagram": "",
+      "no_wa": ""
+    },
+    {
+      "nama": "RISKI SURYA DEPA SARAGIH",
+      "jabatan": "Koordinator Desa",
+      "url_foto": "https://res.cloudinary.com/dxr2nnuji/image/upload/v1752427035/RiskiDepa_ru0p9v.jpg",
+      "nim": "12280211553",
+      "jurusan": "AGROTEKNOLOGI S1",
+      "fakultas": "PERTANIAN DAN PETERNAKAN",
+      "zodiak": "HARAM !!",
+      "instagram": "rkidpa",
+      "no_wa": ""
+    },
+    {
+      "nama": "WIRANDA",
+      "jabatan": "",
+      "url_foto": "",
+      "nim": "12210324846",
+      "jurusan": "MANAJEMEN PENDIDIKAN ISLAM S1",
+      "fakultas": "TARBIYAH DAN KEGURUAN",
+      "zodiak": "",
+      "instagram": "",
+      "no_wa": ""
+    },
+    {
+      "nama": "RIFKY FERDIANSYAH",
+      "jabatan": "",
+      "url_foto": "",
+      "nim": "12280115106",
+      "jurusan": "PETERNAKAN",
+      "fakultas": "PERTANIAN DAN PETERNAKAN",
+      "zodiak": "",
+      "instagram": "",
+      "no_wa": ""
+    },
+    {
+      "nama": "SAYIDIL FAQIH ALIFI HAKIM",
+      "jabatan": "",
+      "url_foto": "",
+      "nim": "12240315690",
+      "jurusan": "ILMU KOMUNIKASI S1",
+      "fakultas": "DAKWAH DAN KOMUNIKASI",
+      "zodiak": "",
+      "instagram": "",
+      "no_wa": ""
+    },
+    {
+      "nama": "AULIA ARIFA",
+      "jabatan": "",
+      "url_foto": "",
+      "nim": "12210125131",
+      "jurusan": "PENDIDIKAN AGAMA ISLAM S1",
+      "fakultas": "TARBIYAH DAN KEGURUAN",
+      "zodiak": "",
+      "instagram": "",
+      "no_wa": ""
+    },
+    {
+      "nama": "PUTRI SHOLEHAH",
+      "jabatan": "",
+      "url_foto": "",
+      "nim": "12210825062",
+      "jurusan": "PENDIDIKAN GURU MADRASAH IBTIDAIYAH S1",
+      "fakultas": "TARBIYAH DAN KEGURUAN",
+      "zodiak": "",
+      "instagram": "",
+      "no_wa": ""
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+// import FarhanPhoto from "./assets/Farhan Fadhila.jpg";
+import { Instagram } from "lucide-react";
+import WhatsApp from "./assets/whatsapp-brands.svg";
+import { useParams } from "react-router";
+import Anggota from "./Anggota.json";
+import NotFound from "./NotFound";
+
+const ProfilAnggota = () => {
+  const params = useParams();
+
+  console.log("NIM:", params.nim);
+
+  const profil = Anggota.Anggota.find((item) => item.nim === params.nim);
+  console.log("Profil:", profil);
+  //   const SimpleMusicPlayer = ({ song, artist, albumArt, audioSrc }) => {
+  //     const [isPlaying, setIsPlaying] = React.useState(false);
+  //     const [progress, setProgress] = React.useState(0);
+  //     const audioRef = React.useRef(new Audio(audioSrc));
+
+  //     const updateProgress = () => {
+  //       const audio = audioRef.current;
+  //       setProgress((audio.currentTime / audio.duration) * 100);
+  //     };
+
+  //     React.useEffect(() => {
+  //       const audio = audioRef.current;
+  //       audio.addEventListener("timeupdate", updateProgress);
+  //       audio.addEventListener("ended", () => {
+  //         setIsPlaying(false);
+  //         setProgress(0);
+  //       });
+
+  //       return () => {
+  //         audio.pause();
+  //         audio.removeEventListener("timeupdate", updateProgress);
+  //         audio.removeEventListener("ended", () => setIsPlaying(false));
+  //       };
+  //     }, []);
+
+  //     const togglePlayPause = () => {
+  //       const audio = audioRef.current;
+  //       if (isPlaying) {
+  //         audio.pause();
+  //       } else {
+  //         audio.play();
+  //       }
+  //       setIsPlaying(!isPlaying);
+  //     };
+
+  //     return (
+  //       <div className="bg-white p-3 rounded-lg shadow-md flex items-center gap-4 transform hover:scale-105 transition-transform duration-300">
+  //         <img
+  //           src={albumArt}
+  //           alt={`Album art for ${song}`}
+  //           className="w-16 h-16 rounded-md object-cover shadow-sm"
+  //         />
+  //         <div className="flex-grow overflow-hidden">
+  //           <p className="font-bold text-gray-800 truncate">{song}</p>
+  //           <p className="text-sm text-gray-500">{artist}</p>
+  //           <div className="bg-gray-200 rounded-full h-1.5 mt-2">
+  //             <div
+  //               className="bg-amber-500 h-1.5 rounded-full transition-all duration-300"
+  //               style={{ width: `${progress || 0}%` }}
+  //             ></div>
+  //           </div>
+  //         </div>
+  //         <button
+  //           onClick={togglePlayPause}
+  //           className="w-12 h-12 flex-shrink-0 bg-amber-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-amber-600 transition-colors text-2xl"
+  //         >
+  //           {isPlaying ? "❚❚" : "▶"}
+  //         </button>
+  //       </div>
+  //     );
+  //   };
+  return (
+    <>
+      {!profil ? (
+        <NotFound />
+      ) : (
+        <>
+          <div className="min-h-screen bg-gray-100 relative overflow-hidden">
+            {/* Newspaper Background Pattern */}
+            <div className="absolute inset-0 opacity-20">
+              <div className="grid grid-cols-12 gap-2 h-full p-4 transform rotate-12 scale-150">
+                {Array.from({ length: 200 }, (_, i) => (
+                  <div
+                    key={i}
+                    className="bg-gray-800 h-4 opacity-30 rounded-sm"
+                  ></div>
+                ))}
+              </div>
+            </div>
+
+            {/* More newspaper lines */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="grid grid-cols-16 gap-1 h-full p-2 transform -rotate-6 scale-125">
+                {Array.from({ length: 400 }, (_, i) => (
+                  <div
+                    key={i}
+                    className="bg-gray-700 h-2 opacity-40 rounded-sm"
+                  ></div>
+                ))}
+              </div>
+            </div>
+
+            {/* Main Content */}
+            <div className="relative z-10 min-h-screen">
+              {/* Header with Bold Typography */}
+              <header className="text-center pt-2 px-4">
+                <h1 className="text-6xl md:text-8xl font-black text-gray-800 mb-4 transform -rotate-2 shadow-text">
+                  KKN
+                </h1>
+                <h2 className="text-5xl md:text-7xl font-black text-gray-700 mb-8 transform rotate-1 shadow-text">
+                  PULAU JAMBU
+                </h2>
+              </header>
+
+              {/* Main Achievement Section */}
+              <main className="px-4 pb-12">
+                <div className="max-w-6xl mx-auto">
+                  {/* Main Photo Section */}
+                  <div className="bg-white bg-opacity-95 rounded-2xl p-8 shadow-2xl transform rotate-1 mb-12">
+                    <div className="text-center">
+                      {/* Main Achievement Text */}
+                      {/* <div className="mb-8">
+                  <div className="bg-amber-600 text-white px-6 py-3 rounded-lg inline-block transform rotate-1 shadow-lg">
+                    <p className="text-2xl font-bold">Dita Cahyani Putri (MP 2023 A)</p>
+                  </div>
+                </div> */}
+
+                      {/* Main Photo */}
+                      <div className="flex justify-center mb-8">
+                        <div className="relative">
+                          {/* Decorative frame */}
+                          <div className="absolute -inset-4 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl transform rotate-3"></div>
+                          <div className="absolute -inset-2 bg-white rounded-2xl transform -rotate-1"></div>
+
+                          {/* Photo container - siap untuk foto asli */}
+                          <div className="relative w-80 h-96 bg-gradient-to-b from-amber-100 to-orange-200 rounded-xl overflow-hidden shadow-xl">
+                            {/* Ganti bagian ini dengan foto asli */}
+                            <img
+                              src={profil!.url_foto}
+                              alt={profil!.nama}
+                              className="w-full h-full object-cover object-center"
+                              style={{
+                                objectFit: "cover",
+                                objectPosition: "center",
+                                backgroundColor: "#fbbf24",
+                                imageRendering: "auto",
+                                filter:
+                                  "blur(0.4px) contrast(0.8) brightness(1.0) ",
+                              }}
+                            />
+
+                            {/* Overlay untuk efek yang bagus */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-amber-900/20 via-transparent to-amber-900/10"></div>
+
+                            {/* Border dalam yang halus */}
+                            <div className="absolute inset-0 border-2 border-amber-300/30 rounded-xl"></div>
+
+                            {/* Celebration elements */}
+                            <a href="">
+                              <div className="absolute top-4 right-4 text-3xl animate-bounce drop-shadow-lg">
+                                <Instagram
+                                  className="stroke-gray-700"
+                                  size={40}
+                                />
+                              </div>
+                            </a>
+
+                            <a href="">
+                              <div className="absolute top-8 left-4 text-2xl animate-bounce drop-shadow-lg">
+                                <img
+                                  src={WhatsApp}
+                                  alt="WhatsApp"
+                                  className="w-10 h-10"
+                                />
+                              </div>
+                            </a>
+                            <div className="absolute bottom-8 right-8 text-2xl animate-bounce drop-shadow-lg">
+                              🏆
+                            </div>
+
+                            {/* Name tag yang stylish */}
+                            <div className="absolute bottom-4 left-4 right-4">
+                              <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
+                                <p className="text-amber-800 font-bold text-lg">
+                                  {profil!.nama}
+                                </p>
+                                <p className="text-amber-600 text-sm">
+                                  {profil!.jabatan}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Supporting Team Section */}
+                  <div className="bg-white bg-opacity-90 rounded-2xl p-8 shadow-2xl transform -rotate-1 mb-12">
+                    <h5 className="text-3xl font-black text-center text-gray-800 mb-8 transform rotate-1">
+                      Informasi Pribadi
+                    </h5>
+                    <div className="space-y-6 text-gray-700">
+                      <div className="grid md:grid-cols-2 gap-6 items-center">
+                        <div className="bg-amber-50 p-4 rounded-lg shadow-inner transform hover:scale-105 transition-transform duration-300 rotate-3">
+                          <p className="font-bold text-amber-800 text-lg">
+                            Jurusan
+                          </p>
+                          <span className="bg-amber-200 text-amber-900 px-3 py-1 rounded-full text-sm font-semibold">
+                            {profil!.jurusan}
+                          </span>
+                        </div>
+                        <div className="bg-amber-50 p-4 rounded-lg shadow-inner transform hover:scale-105 transition-transform duration-300 rotate-[-2deg]">
+                          <p className="font-bold text-amber-800 text-lg">
+                            Fakultas
+                          </p>
+                          <span className="bg-fuchsia-200 text-amber-900 px-3 py-1 rounded-full text-sm font-semibold">
+                            {profil!.fakultas}
+                          </span>
+                        </div>
+                      </div>
+                      {/* <div className="bg-gray-100 p-6 rounded-xl shadow-md transform rotate-1">
+                  <p className="font-extrabold text-gray-800 text-xl text-center tracking-wider">
+                    "Motto Hidup"
+                  </p>
+                  <blockquote className="text-center mt-2 italic text-gray-600 text-lg">
+                    "Teruslah bergerak, karena dalam setiap langkah ada jejak
+                    yang tercipta."
+                  </blockquote>
+                </div> */}
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="bg-amber-50 p-4 rounded-lg shadow-inner rotate-5">
+                          <p className="font-bold text-amber-800 text-lg mb-2">
+                            Zodiak
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            <span className="bg-amber-200 text-amber-900 px-3 py-1 rounded-full text-sm font-semibold">
+                              {profil!.zodiak}
+                            </span>
+                          </div>
+                        </div>
+                        {/* <div className="bg-amber-50 p-4 rounded-lg shadow-inner rotate-5">
+                    <p className="font-bold text-amber-800 text-lg mb-2 ml-1">
+                      Lagu Favorit
+                    </p>
+                    <SimpleMusicPlayer
+                      song="Oceans & Engines"
+                      artist="NIKI"
+                      // albumArt={AlbumArt}
+                      // audioSrc={songUrl}
+                    />
+                  </div> */}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Call to Action */}
+                  <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-8 text-center shadow-2xl transform rotate-1">
+                    <h6 className="text-3xl font-black text-white mb-4 transform -rotate-1">
+                      ✨Saatnya MengAbdi Walaupun Bukan Abdi🚀
+                    </h6>
+                    <p className="text-xl text-gray-300 mb-6">
+                      Satu tujuan, Satu Kordes, Dua Korlap, Tiga PDD, Dua Humas , Satu Bendahara, Dua Konsumsi dan Dua Sekretaris
+                    </p>
+                  </div>
+                </div>
+              </main>
+
+              {/* Footer */}
+              <footer className="bg-gray-900 text-white p-6 mt-12">
+                <div className="max-w-6xl mx-auto">
+                  <div className="text-center text-sm text-gray-400">
+                    <p>© 2025 KKN di Desa Pulau Jambu | Mengabdi, Berkarya, dan Mencari Sinyal.</p>
+                  </div>
+                </div>
+              </footer>
+            </div>
+
+            <style>{`
+        .shadow-text {
+          text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+        }
+      `}</style>
+          </div>
+        </>
+      )}
+    </>
+  );
+};
+
+export default ProfilAnggota;
