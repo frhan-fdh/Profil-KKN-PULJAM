@@ -3,14 +3,14 @@ import ProfilAnggota from "./ProfilAnggota";
 import NotFound from "./NotFound";
 
 const router = createBrowserRouter([
-	{
-		path: "/profilAnggota/:nim",
-		element: <ProfilAnggota />,
-	},
-    	{
-		path: "*",
-		element: <NotFound />,
-	},
+  {
+    path: "/profil-anggota/:nim",
+    element: <ProfilAnggota />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
 ]);
 
 export default router;

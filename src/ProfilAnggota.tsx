@@ -4,75 +4,11 @@ import WhatsApp from "./assets/whatsapp-brands.svg";
 import { useParams } from "react-router";
 import Anggota from "./Anggota.json";
 import NotFound from "./NotFound";
-
+import LogoPuljam from "./assets/LogoPuljam";
 const ProfilAnggota = () => {
-  const params = useParams();
+  const { nim } = useParams();
 
-  console.log("NIM:", params.nim);
-
-  const profil = Anggota.Anggota.find((item) => item.nim === params.nim);
-  console.log("Profil:", profil);
-  //   const SimpleMusicPlayer = ({ song, artist, albumArt, audioSrc }) => {
-  //     const [isPlaying, setIsPlaying] = React.useState(false);
-  //     const [progress, setProgress] = React.useState(0);
-  //     const audioRef = React.useRef(new Audio(audioSrc));
-
-  //     const updateProgress = () => {
-  //       const audio = audioRef.current;
-  //       setProgress((audio.currentTime / audio.duration) * 100);
-  //     };
-
-  //     React.useEffect(() => {
-  //       const audio = audioRef.current;
-  //       audio.addEventListener("timeupdate", updateProgress);
-  //       audio.addEventListener("ended", () => {
-  //         setIsPlaying(false);
-  //         setProgress(0);
-  //       });
-
-  //       return () => {
-  //         audio.pause();
-  //         audio.removeEventListener("timeupdate", updateProgress);
-  //         audio.removeEventListener("ended", () => setIsPlaying(false));
-  //       };
-  //     }, []);
-
-  //     const togglePlayPause = () => {
-  //       const audio = audioRef.current;
-  //       if (isPlaying) {
-  //         audio.pause();
-  //       } else {
-  //         audio.play();
-  //       }
-  //       setIsPlaying(!isPlaying);
-  //     };
-
-  //     return (
-  //       <div className="bg-white p-3 rounded-lg shadow-md flex items-center gap-4 transform hover:scale-105 transition-transform duration-300">
-  //         <img
-  //           src={albumArt}
-  //           alt={`Album art for ${song}`}
-  //           className="w-16 h-16 rounded-md object-cover shadow-sm"
-  //         />
-  //         <div className="flex-grow overflow-hidden">
-  //           <p className="font-bold text-gray-800 truncate">{song}</p>
-  //           <p className="text-sm text-gray-500">{artist}</p>
-  //           <div className="bg-gray-200 rounded-full h-1.5 mt-2">
-  //             <div
-  //               className="bg-amber-500 h-1.5 rounded-full transition-all duration-300"
-  //               style={{ width: `${progress || 0}%` }}
-  //             ></div>
-  //           </div>
-  //         </div>
-  //         <button
-  //           onClick={togglePlayPause}
-  //           className="w-12 h-12 flex-shrink-0 bg-amber-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-amber-600 transition-colors text-2xl"
-  //         >
-  //           {isPlaying ? "❚❚" : "▶"}
-  //         </button>
-  //       </div>
-  //     );
-  //   };
+  const profil = Anggota.Anggota.find((item) => item.nim === nim);
   return (
     <>
       {!profil ? (
@@ -107,13 +43,16 @@ const ProfilAnggota = () => {
             {/* Main Content */}
             <div className="relative z-10 min-h-screen">
               {/* Header with Bold Typography */}
-              <header className="text-center pt-2 px-4">
+              <header className="text-center pt-2 px-4 relative">
                 <h1 className="text-6xl md:text-8xl font-black text-gray-800 mb-4 transform -rotate-2 shadow-text">
                   KKN
                 </h1>
-                <h2 className="text-5xl md:text-7xl font-black text-gray-700 mb-8 transform rotate-1 shadow-text">
+                <h2 className="text-3xl md:text-7xl font-black text-gray-700 mb-8 transform rotate-1 shadow-text">
                   PULAU JAMBU
                 </h2>
+                <div className="absolute top-0 right-0 animate-pulse">
+                  <LogoPuljam />
+                </div>
               </header>
 
               {/* Main Achievement Section */}
@@ -122,13 +61,6 @@ const ProfilAnggota = () => {
                   {/* Main Photo Section */}
                   <div className="bg-white bg-opacity-95 rounded-2xl p-8 shadow-2xl transform rotate-1 mb-12">
                     <div className="text-center">
-                      {/* Main Achievement Text */}
-                      {/* <div className="mb-8">
-                  <div className="bg-amber-600 text-white px-6 py-3 rounded-lg inline-block transform rotate-1 shadow-lg">
-                    <p className="text-2xl font-bold">Dita Cahyani Putri (MP 2023 A)</p>
-                  </div>
-                </div> */}
-
                       {/* Main Photo */}
                       <div className="flex justify-center mb-8">
                         <div className="relative">
@@ -160,7 +92,7 @@ const ProfilAnggota = () => {
                             <div className="absolute inset-0 border-2 border-amber-300/30 rounded-xl"></div>
 
                             {/* Celebration elements */}
-                            <a href="">
+                            <a href={profil?.instagram || ""} target="_blank">
                               <div className="absolute top-4 right-4 text-3xl animate-bounce drop-shadow-lg">
                                 <Instagram
                                   className="stroke-gray-700"
@@ -178,8 +110,8 @@ const ProfilAnggota = () => {
                                 />
                               </div>
                             </a>
-                            <div className="absolute bottom-8 right-8 text-2xl animate-bounce drop-shadow-lg">
-                              🏆
+                            <div className="absolute bottom-4 right-4 text-2xl drop-shadow-lg z-20">
+                              💫
                             </div>
 
                             {/* Name tag yang stylish */}
@@ -206,7 +138,7 @@ const ProfilAnggota = () => {
                     </h5>
                     <div className="space-y-6 text-gray-700">
                       <div className="grid md:grid-cols-2 gap-6 items-center">
-                        <div className="bg-amber-50 p-4 rounded-lg shadow-inner transform hover:scale-105 transition-transform duration-300 rotate-3">
+                        <div className="bg-amber-50 p-4 rounded-lg shadow-inner transform transition-transform duration-300 rotate-3">
                           <p className="font-bold text-amber-800 text-lg">
                             Jurusan
                           </p>
@@ -214,7 +146,7 @@ const ProfilAnggota = () => {
                             {profil!.jurusan}
                           </span>
                         </div>
-                        <div className="bg-amber-50 p-4 rounded-lg shadow-inner transform hover:scale-105 transition-transform duration-300 rotate-[-2deg]">
+                        <div className="bg-amber-50 p-4 rounded-lg shadow-inner transform transition-transform duration-300 rotate-[-2deg]">
                           <p className="font-bold text-amber-800 text-lg">
                             Fakultas
                           </p>
@@ -223,37 +155,18 @@ const ProfilAnggota = () => {
                           </span>
                         </div>
                       </div>
-                      {/* <div className="bg-gray-100 p-6 rounded-xl shadow-md transform rotate-1">
-                  <p className="font-extrabold text-gray-800 text-xl text-center tracking-wider">
-                    "Motto Hidup"
-                  </p>
-                  <blockquote className="text-center mt-2 italic text-gray-600 text-lg">
-                    "Teruslah bergerak, karena dalam setiap langkah ada jejak
-                    yang tercipta."
-                  </blockquote>
-                </div> */}
+                     
                       <div className="grid md:grid-cols-2 gap-6">
                         <div className="bg-amber-50 p-4 rounded-lg shadow-inner rotate-5">
                           <p className="font-bold text-amber-800 text-lg mb-2">
                             Zodiak
                           </p>
                           <div className="flex flex-wrap gap-2">
-                            <span className="bg-amber-200 text-amber-900 px-3 py-1 rounded-full text-sm font-semibold">
+                            <span className="bg-green-200 text-amber-900 px-3 py-1 rounded-full text-sm font-semibold">
                               {profil!.zodiak}
                             </span>
                           </div>
                         </div>
-                        {/* <div className="bg-amber-50 p-4 rounded-lg shadow-inner rotate-5">
-                    <p className="font-bold text-amber-800 text-lg mb-2 ml-1">
-                      Lagu Favorit
-                    </p>
-                    <SimpleMusicPlayer
-                      song="Oceans & Engines"
-                      artist="NIKI"
-                      // albumArt={AlbumArt}
-                      // audioSrc={songUrl}
-                    />
-                  </div> */}
                       </div>
                     </div>
                   </div>
@@ -264,7 +177,8 @@ const ProfilAnggota = () => {
                       ✨Saatnya MengAbdi Walaupun Bukan Abdi🚀
                     </h6>
                     <p className="text-xl text-gray-300 mb-6">
-                      Satu tujuan, Satu Kordes, Dua Korlap, Tiga PDD, Dua Humas , Satu Bendahara, Dua Konsumsi dan Dua Sekretaris
+                      Satu tujuan, Satu Kordes, Dua Korlap, Tiga PDD, Dua Humas
+                      , Satu Bendahara, Dua Konsumsi dan Dua Sekretaris
                     </p>
                   </div>
                 </div>
@@ -274,7 +188,10 @@ const ProfilAnggota = () => {
               <footer className="bg-gray-900 text-white p-6 mt-12">
                 <div className="max-w-6xl mx-auto">
                   <div className="text-center text-sm text-gray-400">
-                    <p>© 2025 KKN di Desa Pulau Jambu | Mengabdi, Berkarya, dan Mencari Sinyal.</p>
+                    <p>
+                      © 2025 KKN di Desa Pulau Jambu | Mengabdi, Berkarya, dan
+                      Mencari Rezeki.
+                    </p>
                   </div>
                 </div>
               </footer>
