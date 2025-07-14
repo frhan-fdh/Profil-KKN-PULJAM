@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function LogoPuljam2() {
   return (
     <div>
