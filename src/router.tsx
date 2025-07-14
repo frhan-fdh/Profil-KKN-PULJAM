@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import ProfilAnggota from "./ProfilAnggota";
 import NotFound from "./NotFound";
+import ComingSoon from "./ComingSoon";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
     path: "*",
     element: <NotFound />,
   },
+  {
+    path: "/",
+    element: <ComingSoon />,
+  }
 ]);
 
 export default router;

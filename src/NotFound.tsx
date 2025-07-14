@@ -1,5 +1,7 @@
+import { useParams } from "react-router";
 
 function NotFound() {
+  const {nim} = useParams();
   return (
     <div className="min-h-screen bg-caution-tape flex items-center justify-center p-4 overflow-hidden relative">
       <div className="absolute inset-0 flex items-center justify-center">
@@ -13,7 +15,7 @@ function NotFound() {
         </h1>
         <p className="text-gray-800 mt-4 text-lg">
           Maaf, data untuk NIM{" "}
-          <span className="font-bold text-black">00000</span> tidak dapat
+          <span className="font-bold text-black">{nim}</span> tidak dapat
           ditemukan.
         </p>
         <p className="text-gray-600 mt-2">Silakan periksa kembali URL Anda.</p>
