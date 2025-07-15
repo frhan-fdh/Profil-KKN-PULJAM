@@ -174,7 +174,7 @@ const ProfilAnggota = () => {
                   {/* Call to Action */}
                   <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-8 text-center shadow-2xl transform rotate-1">
                     <h6 className="text-3xl font-black text-white mb-4 transform -rotate-1">
-                      ✨Saatnya MengAbdi Walaupun Bukan Abdi🚀
+                      ✨Bersatu dalam Sinergi, Berkarya Tanpa Henti🚀
                     </h6>
                     <p className="text-xl text-gray-300 mb-6">
                       Satu tujuan, Satu Kordes, Dua Korlap, Tiga PDD, Dua Humas
